@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    banner="1920x1080,1823,1199|1080x1080,1080,1080|1080x1350,1780,1350|1080x1920,2010,1322|1600x500,1800,1000|960x400,1400,800|640x960,1300,960|240x1200,1240,1200|960x1280,1800,1280|1940x180,1940,700|1280x960,1280,1000|1080x566,1080,600"
+    crop_type="crop_smart"
+    preserveCrop="true"
+    swatch="color,100,100"
+    usmAmount="1.75"
+    usmMonochrome="0"
+    usmRadius="0.2"
+    usmThreshold="2"/>

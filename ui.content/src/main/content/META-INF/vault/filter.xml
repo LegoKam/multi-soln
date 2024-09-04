@@ -10,6 +10,7 @@
     <filter root="/content/experience-fragments/showcase" mode="merge"/>
 
     <filter root="/conf/global/settings/dam/adminui-extension/metadataschema/default" mode="merge"/>
+    <filter root="/conf/global/settings/dam/adminui-extension/imageprofile/Aspen-Smart-Crop" />
 
 
 </workspaceFilter>
