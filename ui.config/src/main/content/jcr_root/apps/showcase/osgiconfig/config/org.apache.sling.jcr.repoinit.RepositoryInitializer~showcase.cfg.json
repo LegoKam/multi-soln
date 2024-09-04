@@ -1,0 +1,14 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/showcase",
+        "create path (sling:OrderedFolder) /var/dam/downloadaudit",
+        "create path (nt:unstructured) /content/dam/showcase/jcr:content",
+        "create path (sling:Folder) /var/eventing/jobs/finished/async.download",
+        "set properties on /content/dam/showcase/jcr:content\n  set cq:conf{String} to /conf/showcase\n  set jcr:title{String} to \"AdobeDX\"\nend",
+        "create service user content-svc-admin with path system/showcase",
+        "set ACL for content-svc-admin\n   allow jcr:all on /content/\n end",
+        "set ACL for content-svc-admin\n   allow jcr:all on /conf/\n end",
+        "set ACL for content-svc-admin\n   allow jcr:all on /var/eventing/jobs/finished/async.download/\n end",
+        "set ACL for content-svc-admin\n   allow jcr:all on /var/dam/downloadaudit/\n end"
+    ]
+}

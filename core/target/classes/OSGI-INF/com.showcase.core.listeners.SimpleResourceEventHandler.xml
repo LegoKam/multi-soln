@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.showcase.core.listeners.SimpleResourceEventHandler" immediate="true">
+  <property name="service.description" type="String" value=" Download event handler"/>
+  <property name="event.topics" type="String" value="org/apache/sling/api/resource/Resource/ADDED"/>
+  <property name="event.filter" type="String" value="(path=/var/eventing/jobs/finished/async.download/*)"/>
+  <service>
+    <provide interface="org.osgi.service.event.EventHandler"/>
+  </service>
+  <reference name="resolverFactory" interface="org.apache.sling.api.resource.ResourceResolverFactory" field="resolverFactory"/>
+  <implementation class="com.showcase.core.listeners.SimpleResourceEventHandler"/>
+</scr:component>

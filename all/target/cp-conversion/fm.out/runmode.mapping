@@ -1,0 +1,5 @@
+#File edited by the Apache Sling Content Package to Sling Feature converter
+#Wed Sep 04 12:10:49 AEST 2024
+(default)=showcase.all.json
+author=showcase.all-author.json
+publish=showcase.all-publish.json

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.showcase.core.schedulers.NotifyExpiredAssets" immediate="true" activate="activate" deactivate="deactivated">
+  <property name="cronExp" type="String" value="0 * * * * ?"/>
+  <property name="syncPath" type="String" value="/content/dam"/>
+  <property name="schedulerName" type="String" value="expired_asset_sync"/>
+  <property name="approvedAssets" type="String" value="SELECT * FROM [dam:Asset] AS s WHERE ISDESCENDANTNODE([/content/dam/works]) and [jcr:content/metadata/dam:status] = 'approved'"/>
+  <service>
+    <provide interface="org.apache.sling.commons.scheduler.Job"/>
+  </service>
+  <reference name="resourceResolverFactory" interface="org.apache.sling.api.resource.ResourceResolverFactory" field="resourceResolverFactory"/>
+  <reference name="scheduler" interface="org.apache.sling.commons.scheduler.Scheduler" field="scheduler"/>
+  <implementation class="com.showcase.core.schedulers.NotifyExpiredAssets"/>
+</scr:component>
