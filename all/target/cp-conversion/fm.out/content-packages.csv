@@ -1,4 +1,4 @@
-# File created on Wed Sep 04 12:10:48 AEST 2024 by the Apache Sling Content Package to Sling Feature converter
+# File created on Wed Sep 04 12:21:10 AEST 2024 by the Apache Sling Content Package to Sling Feature converter
 # content-package path, content-package ID, content-package type, content-package parent ID, path in parent content-package, absolute path
 /Users/kamalesh/Documents/WORKSPACE/Code/multi-soln-setup/multi-soln/all/target/showcase.all-1.0-SNAPSHOT.zip,com.showcase:showcase.all:1.0-SNAPSHOT,CONTAINER,,,
 /Users/kamalesh/Documents/WORKSPACE/Code/multi-soln-setup/multi-soln/all/target/showcase.all-1.0-SNAPSHOT.zip,com.showcase:showcase.ui.apps:1.0-SNAPSHOT,APPLICATION,com.showcase:showcase.all:1.0-SNAPSHOT,/jcr_root/apps/showcase-packages/application/install/showcase.ui.apps-1.0-SNAPSHOT.zip,/Users/kamalesh/Documents/WORKSPACE/Code/multi-soln-setup/multi-soln/all/target/showcase.all-1.0-SNAPSHOT.zip!/jcr_root/apps/showcase-packages/application/install/showcase.ui.apps-1.0-SNAPSHOT.zip

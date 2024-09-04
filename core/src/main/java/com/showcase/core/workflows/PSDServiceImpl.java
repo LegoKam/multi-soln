@@ -39,15 +39,15 @@ import java.util.stream.Collectors;
 public class PSDServiceImpl implements WorkflowProcess {
 
 //    Workflow process - arguments
-//    azureBlobContainer = https://blobstorage4poc.blob.core.windows.net/container2/
-//    azureConnectionString = DefaultEndpointsProtocol=https;AccountName=blobstorage4poc;AccountKey=bRvgwrBTEoBiFEJJiPaAGap/59q72P994/AzEKeu6gaqBzBEM4egds5Qv6fFx0YNOykWI3K34lki+AStmMmF2w==;EndpointSuffix=core.windows.net
-//    containerRef = container2
-//    psAuthToken = Bearer eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LWF0LTEuY2VyIiwia2lkIjoiaW1zX25hMS1rZXktYXQtMSIsIml0dCI6ImF0In0.eyJpZCI6IjE2OTY5NDM5MDg5MDRfOTAxZThkYWUtMTZkOC00MTk3LTgzNDYtN2FhNDRjYzI0ZjhlX3V3MiIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjbGllbnRfaWQiOiJjY2FzLXdlYl8wXzEiLCJ1c2VyX2lkIjoiQ0VDNUM3MDM1NDg5RjVBNjBBNEM5OEExQGFkb2JlLmNvbSIsInN0YXRlIjoie1wianNsaWJ2ZXJcIjpcInYyLXYwLjM4LjAtMTctZzYzMzMxOWRcIixcIm5vbmNlXCI6XCIzMjU0NTgxOTIzMzQ3MzQ5XCJ9IiwiYXMiOiJpbXMtbmExIiwiYWFfaWQiOiJDRUM1QzcwMzU0ODlGNUE2MEE0Qzk4QTFAYWRvYmUuY29tIiwiY3RwIjowLCJmZyI6IlgzR1A0STZFVlBQNU1IVU9HTVFWWVhBQVlRIiwic2lkIjoiMTY5Njk0MzkwODg5OV85ZTMxMWY4OC02MTVlLTRhZmItOWZlYS00ZDY4NzM0OTg1MDJfdXcyIiwibW9pIjoiNGNjNGZjNWUiLCJwYmEiOiJNZWRTZWNOb0VWLExvd1NlYyIsImV4cGlyZXNfaW4iOiI4NjQwMDAwMCIsInNjb3BlIjoiQWRvYmVJRCxvcGVuaWQsY3JlYXRpdmVfY2xvdWQsaW5kZXNpZ25fc2VydmljZXMiLCJjcmVhdGVkX2F0IjoiMTY5Njk0MzkwODkwNCJ9.Wm-UjeBDB7EgFgMwDCBuZPjSkAzzjt8BLP0IIn2_--vTo3RUpCh_lAZ1kIsfgwz05u-z0mL0YNsabOfQ81ErQBUjxiBHHTonphNPzVD1LFJ-rNMOCcZBDL42JjgiULncKUNTOR4sWlEnVj1sds7Uuf1dxC17vNxYeCe_4kaVkvj5cQhdyEg0umf_uZouqgtZHT_ws5d0NeC4D01R5WuzyIVs2iWhlTRsWL9oBKRFsR_BPh0JRttVu36xNUInfDxWkcSoJDa93OGVVQrzVCzFzlrdQxfN7c_XjDBfGSRekFoVcpXidRswYkNGLB8sYlcmI8i2uYFKPTnbzKXlIYMM3w
+//    azureBlobContainer = <azure blob container>
+//    azureConnectionString = <connection string>
+//    containerRef = <container name>
+//    psAuthToken = Bearer <token>
 //    psDataMergeServiceUrl = https://image.adobe.io/pie/psdService/documentOperations
-//    psServiceAPIKey = ccas-web_0_1
-//    scene7Url = https://s7ap1.scene7.com/is/image/AGS489/
+//    psServiceAPIKey = <api-key>
+//    scene7Url = https://<scene7-url>/is/image/<client name>/
 //    authEndpoint = https://ims-na1.adobelogin.com/ims/token/v3
-//    authPostBody = grant_type=client_credentials&client_id=521079954f304ed59ae8654cc0c63429&client_secret=p8e-T_RAHG9xRcZwjt-k0kJ3JFQ76_LTM9D4&scope=openid,AdobeID,read_organizations
+//    authPostBody = <auth details>
 
 
     private static final Logger log = LoggerFactory.getLogger(PSDServiceImpl.class);
@@ -72,8 +72,8 @@ public class PSDServiceImpl implements WorkflowProcess {
         String[] argsArray = StringUtils.split(argumentsString, System.getProperty("line.separator"));
         Map<String, String> argsMap = Arrays.stream(argsArray).map(String::trim).map(s -> s.split(" = ")).filter(s -> s.length > 1).collect(Collectors.toMap(s -> s[0].trim(), s -> s[1].trim()));
 
-        String endpoint = argsMap.get("authEndpoint");//"https://ims-na1.adobelogin.com/ims/token/v3";
-        String postBody = argsMap.get("authPostBody"); //"grant_type=client_credentials&client_id=521079954f304ed59ae8654cc0c63429&client_secret=p8e-T_RAHG9xRcZwjt-k0kJ3JFQ76_LTM9D4&scope=openid,AdobeID,read_organizations";
+        String endpoint = argsMap.get("authEndpoint");
+        String postBody = argsMap.get("authPostBody");
         String token = AEMUtil.getAuthToken(endpoint, postBody);
 
         this.psAuthToken = token;

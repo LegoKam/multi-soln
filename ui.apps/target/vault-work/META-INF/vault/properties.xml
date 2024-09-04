@@ -4,7 +4,7 @@
 <comment>AdobeDX - UI apps</comment>
 <entry key="cloudManagerTarget">none</entry>
 <entry key="allowIndexDefinitions">false</entry>
-<entry key="created">2024-09-04T02:10:44.830Z</entry>
+<entry key="created">2024-09-04T02:21:06.093Z</entry>
 <entry key="groupId">com.showcase</entry>
 <entry key="name">showcase.ui.apps</entry>
 <entry key="description">UI apps package for AdobeDX</entry>

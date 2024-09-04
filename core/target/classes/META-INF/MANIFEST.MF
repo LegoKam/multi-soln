@@ -104,9 +104,8 @@ Service-Component: OSGI-INF/com.showcase.core.filters.LoggingFilter.xm
  OSGI-INF/com.showcase.core.schedulers.NotifyExpiredAssets.xml,OSGI-IN
  F/com.showcase.core.schedulers.ServerPoller.xml,OSGI-INF/com.showcase
  .core.servlets.SimpleServlet.xml,OSGI-INF/com.showcase.core.workflows
- .CreatePageWithContentFragment.xml,OSGI-INF/com.showcase.core.workflo
- ws.CsvFileToContentFragment.xml,OSGI-INF/com.showcase.core.workflows.
- PSDServiceImpl.xml,OSGI-INF/com.showcase.core.workflows.SyncAssetToMa
- rketo.xml
+ .CsvFileToContentFragment.xml,OSGI-INF/com.showcase.core.workflows.PS
+ DServiceImpl.xml,OSGI-INF/com.showcase.core.workflows.SyncAssetToMark
+ eto.xml
 Sling-Model-Classes: com.showcase.core.models.HelloWorldModel
 

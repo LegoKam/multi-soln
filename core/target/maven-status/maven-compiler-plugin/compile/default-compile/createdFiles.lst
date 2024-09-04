@@ -15,7 +15,6 @@ com/showcase/core/models/HelloWorldModel.class
 com/showcase/core/servlets/package-info.class
 com/showcase/core/schedulers/package-info.class
 com/showcase/core/config/PollerConfig.class
-com/showcase/core/workflows/CreatePageWithContentFragment.class
 com/showcase/core/beans/photoshop/output/Root.class
 com/showcase/core/beans/photoshop/Root.class
 com/showcase/core/beans/photoshop/output/Layer.class
